@@ -1,6 +1,7 @@
 package challenge.code.com.listbasedapp;
 
 import android.app.FragmentManager;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         initObj();
         initListeners();
 
-
+        items.clear();
         parseJSONData(dummyListData);
         recyclerViewAdapter = new RecyclerViewAdapter(MainActivity.this, items);
         recyclerview.setAdapter(recyclerViewAdapter);
@@ -130,4 +131,6 @@ public class MainActivity extends AppCompatActivity {
     public static String capitalizeFirstLetter(final String name) {
         return Character.toUpperCase(name.charAt(0)) + name.substring(1).toLowerCase();
     }
+
+
 }
