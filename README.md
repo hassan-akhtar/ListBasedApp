@@ -8,7 +8,7 @@
    need to be repeatedly be created. Subclasses must complete the behaviour and have the option
    to override predefine behaviour (as long as it is not defined as final or private).
 
-<B>Example :
+<B>Example :</B>
 
      public interface LoginAuth {
            public String encryptPassword(String pass);
