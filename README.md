@@ -1,6 +1,6 @@
-Answers:
+<H1>Answers:</H1>
 
-1- An interface is a description of the behaviour an implementing class will have.
+<B>1-</B> An interface is a description of the behaviour an implementing class will have.
    The implementing class ensures, that it will have these methods that can be used on it.
    It is basically a contract or a promise the class has to make.
 
@@ -8,7 +8,7 @@ Answers:
    need to be repeatedly be created. Subclasses must complete the behaviour and have the option
    to override predefine behaviour (as long as it is not defined as final or private).
 
-Example :
+<B>Example :
 
      public interface LoginAuth {
            public String encryptPassword(String pass);
@@ -48,19 +48,19 @@ Example :
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-2-    It flawed in Multiple inheritance (Diamond Problem). Suppose We have two classes B and C inheriting from A. 
+<B>2-</B>    It flawed in Multiple inheritance (Diamond Problem). Suppose We have two classes B and C inheriting from A. 
       Assume that B and C are overriding an inherited method and they provide their own implementation. 
       Now D inherits from both B and C doing multiple inheritance. D should inherit that overridden method, 
       which overridden method will be used? Will it be from B or C? Here we have an ambiguity. 
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-3-    An Activity is an application component that provides a screen, with which users can interact in order
+<B>3-</B>    An Activity is an application component that provides a screen, with which users can interact in order
       to do something whereas a Fragment represents a behavior or a portion of user interface in an Activity.
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-4-    To allow a Fragment to communicate up to its Activity, you can define an interface in the Fragment class and implement
+<B>4-</B>    To allow a Fragment to communicate up to its Activity, you can define an interface in the Fragment class and implement
       it within the Activity. The Fragment captures the interface implementation during its onAttach() lifecycle method and
       can then call the Interface methods in order to communicate with the Activity.
 
@@ -119,15 +119,15 @@ public static class MainActivity extends Activity
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-5-   Activity is a part of the four core components of Android, along with Service, Broadcast Receiver and Content provider.
+<B>5-</B>   Activity is a part of the four core components of Android, along with Service, Broadcast Receiver and Content provider.
      But fragment is not a core component, it's there to be used as a part or 'fragment' of activity. Your app certainly can 
      be built using only activities, just like many other apps.
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-6-   No orientation change support
-     No ability to cancel network calls
-     As well as no easy way to make API calls in parallel.
+<B>6-</B>   No orientation change support
+            No ability to cancel network calls
+            As well as no easy way to make API calls in parallel.
 
      Let take an example of Orientation change issue.
 
