@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ListBasedApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_dialog">Please Enter Your Name</string>
+    <string name="error_firstname">Please Enter Your First Name</string>
+    <string name="error_lastname">Please Enter Your Last Name</string>
+    <string name="empty_string"></string>
+    <string name="dialog_tag">Dialog Fragment</string>
+    <string name="msg_exception">Exception: Invalid JSON Format</string>
+    <string name="json_array_name">Names</string>
+    <string name="json_obj_firstname">firstname</string>
+    <string name="json_obj_lastname">lastname</string>
+    <string name="msg_toast_name_added">Name Added</string>
+    <string name="str_separator">,&#160;</string>
+
+
+
+</resources>
