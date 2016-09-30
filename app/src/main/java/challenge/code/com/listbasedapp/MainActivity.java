@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         initObj();
         initListeners();
 
-        items.clear();
+
+        if(savedInstanceState == null)
         parseJSONData(dummyListData);
         recyclerViewAdapter = new RecyclerViewAdapter(MainActivity.this, items);
         recyclerview.setAdapter(recyclerViewAdapter);
@@ -132,5 +133,9 @@ public class MainActivity extends AppCompatActivity {
         return Character.toUpperCase(name.charAt(0)) + name.substring(1).toLowerCase();
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outInstanceState) {
+        outInstanceState.putInt("value", 1);
+    }
 
 }
