@@ -15,36 +15,36 @@ Example :
            public void checkDBforUser();
                   }
 
-     Now suppose you have 3 databases in your application. Then each and every implementation for 
-     that database needs to define the above 2 methods:
+   Now suppose you have 3 databases in your application. Then each and every implementation for 
+   that database needs to define the above 2 methods:
 
 
-public class DBMySQL implements LoginAuth{
+        public class DBMySQL implements LoginAuth {
           // Needs to implement both methods
-}
-public class DBOracle implements LoginAuth{
+        }
+        public class DBOracle implements LoginAuth {
           // Needs to implement both methods
-}
-public class DBAbc implements LoginAuth{
+        }
+       public class DBAbc implements LoginAuth {
           // Needs to implement both methods
-}
+       }
 
-       But what if encryptPassword() is not database dependent, 
-       and it's the same for each class? Then the above would not be a good approach.
+     But what if encryptPassword() is not database dependent, 
+     and it's the same for each class? Then the above would not be a good approach.
 
         Instead, consider this approach:
 
-public abstract class LoginAuth{
-   public String encryptPassword(String pass){
+            public abstract class LoginAuth{
+            public String encryptPassword(String pass){
             // Implement the same default behavior here 
             // that is shared by all subclasses.
-   }
+            }
 
-   // Each subclass needs to provide their own implementation of this only:
-   public abstract void checkDBforUser();
-}
-
-        Now in each child class, we only need to implement one method - the method that is database dependent.
+             // Each subclass needs to provide their own implementation of this only:
+             public abstract void checkDBforUser();
+               }
+ 
+     Now in each child class, we only need to implement one method - the method that is database dependent.
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
